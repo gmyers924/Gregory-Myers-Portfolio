@@ -9,47 +9,84 @@
     padding-right: 15px;
 }
 
-/* Print-friendly adjustments */
+/* ================================
+   Print-Friendly Portfolio Styles
+   ================================ */
 @media print {
-  /* Remove navigation, footers, and buttons */
-  nav, footer, .sidebar, .buttons {
-    display: none !important;
-  }
 
-  /* Make text readable */
+  /* General page setup */
   body {
     font-size: 12pt;
     line-height: 1.5;
-    color: #000; /* avoid light gray text */
-    background: #fff; /* remove background colors */
+    color: #000 !important;
+    background: #fff !important;
+    margin: 0;
+    padding: 0;
   }
 
-  /* Ensure images scale properly */
-  img {
-    max-width: 100%;
-    height: auto;
+  /* Remove navigation, buttons, and footers */
+  nav, footer, .btn, .carousel-control-prev, .carousel-control-next {
+    display: none !important;
   }
 
-  /* Avoid page breaks inside project sections */
-  .project {
-    page-break-inside: avoid;
+  /* Force single-column layout */
+  .row, .col-md-4, .col-12 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Project cards: one per page */
+  .card {
+    page-break-before: always;
+    border: none !important;
+    box-shadow: none !important;
     margin-bottom: 2em;
   }
 
-  /* Add page numbers */
+  /* Headings */
+  h1, h2, h3, h4, h5 {
+    color: #000 !important;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  /* Images: full width, clear, no cropping */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    margin-bottom: 1em;
+  }
+
+  /* Lists: clean spacing */
+  ul {
+    margin: 0 0 1em 1.5em;
+    padding: 0;
+  }
+
+  /* Paragraphs: readable spacing */
+  p {
+    margin: 0 0 1em 0;
+  }
+
+  /* Page margins */
   @page {
     margin: 1in;
   }
-  footer::after {
+
+  /* Optional: page numbers */
+  body::after {
     content: counter(page);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 10pt;
+    color: #666;
   }
 }
 
-@media print {
-  .card {
-    page-break-before: always;
-  }
-}
+
 
 
 
