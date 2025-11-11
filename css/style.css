@@ -9,3 +9,41 @@
     padding-right: 15px;
 }
 
+/* Print-friendly adjustments */
+@media print {
+  /* Remove navigation, footers, and buttons */
+  nav, footer, .sidebar, .buttons {
+    display: none !important;
+  }
+
+  /* Make text readable */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000; /* avoid light gray text */
+    background: #fff; /* remove background colors */
+  }
+
+  /* Ensure images scale properly */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Avoid page breaks inside project sections */
+  .project {
+    page-break-inside: avoid;
+    margin-bottom: 2em;
+  }
+
+  /* Add page numbers */
+  @page {
+    margin: 1in;
+  }
+  footer::after {
+    content: counter(page);
+  }
+}
+
+
+
