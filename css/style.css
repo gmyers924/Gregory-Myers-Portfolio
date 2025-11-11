@@ -75,15 +75,7 @@
     margin: 1in;
   }
 
-  /* Optional: page numbers */
-  body::after {
-    content: counter(page);
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    font-size: 10pt;
-    color: #666;
-  }
+
 
 .card-body p {
     display: none;
@@ -112,6 +104,7 @@
 
     
 }
+
 
 
 
