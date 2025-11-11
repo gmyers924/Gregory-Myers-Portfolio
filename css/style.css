@@ -85,17 +85,22 @@
     color: #666;
   }
 
-.card-body p, .card-body ul {
+.card-body p {
+    display: block;
+}
+    .card-body ul {
     display: none; /* hides long text */
   }
   .card-body h5 {
     font-size: 14pt;
+          margin-bottom: 0.5em;
   }
 
 
 
     
 }
+
 
 
 
