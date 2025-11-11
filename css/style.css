@@ -84,7 +84,19 @@
     font-size: 10pt;
     color: #666;
   }
+
+.card-body p, .card-body ul {
+    display: none; /* hides long text */
+  }
+  .card-body h5 {
+    font-size: 14pt;
+  }
+
+
+
+    
 }
+
 
 
 
