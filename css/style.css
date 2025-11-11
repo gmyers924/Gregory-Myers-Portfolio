@@ -97,9 +97,22 @@
   }
 
 
+  /* Force images to shrink if taller than the page */
+  img {
+    max-height: 9in; /* adjust based on your page size */
+    object-fit: contain;
+  }
+
+  /* Keep project cards together */
+  .card {
+    page-break-inside: avoid;
+  }
+
+
 
     
 }
+
 
 
 
